@@ -1,9 +1,0 @@
-version: "3.8"
-
-services:
-  assignment3:
-    build: .
-    ports:
-      - "3000:3000"
-    environment:
-      - FLASK_DEBUG=true
