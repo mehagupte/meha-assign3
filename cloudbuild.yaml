@@ -1,16 +1,16 @@
 steps:
   # Step 1: Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/sample-project-441721/meha-assign3/gupte-assign3-user:latest', '.']
+    args: ['build', '-t', 'gcr.io/sample-project-441721/gupte-assign3-repo/gupte-assign3:latest', '.']
     id: 'Build Docker Image'
 
   # Step 2: Tag the Docker Image 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['tag', 'gcr.io/sample-project-441721/meha-assign3/gupte-assign3-user:latest']
+    args: ['tag', 'gcr.io/sample-project-441721/gupte-assign3-repo/gupte-assign3:latest']
 
   # Step 3: Push the Docker image to Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/sample-project-441721/meha-assign3/gupte-assign3-user:latest']
+    args: ['push', 'gcr.io/sample-project-441721/gupte-assign3-repo/gupte-assign3:latest']
     id: 'Push to Artifact Registry'
 
   # Step 4: Deploy the Docker image
